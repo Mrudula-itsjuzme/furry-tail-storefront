@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furry Tail — For Cats</title>
+  <meta name="description" content="The Furry Tail Gentle Daily Shampoo is suitable for both dogs and cats. Natural-origin, probiotic-preserved, gentle enough for the most sensitive coat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <script>document.documentElement.classList.add('js-on');</script>
+  <style>
+    .dogs-only-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-m);
+      margin-top: var(--space-l);
+    }
+    .dogs-only-item {
+      padding: var(--space-m);
+      border: 1px solid var(--mist);
+    }
+    .dogs-only-item__name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .dogs-only-item__frag {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--sage);
+      font-size: 0.95rem;
+      margin-bottom: var(--space-s);
+    }
+    .dogs-only-item__note {
+      font-size: 0.88rem;
+      color: #2a2f28;
+      line-height: 1.65;
+    }
+    @media (max-width: 640px) {
+      .dogs-only-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Furry Tail — home"><img src="images/logo.png" alt="Furry Tail" /></a>
+    <ul class="nav__links" role="menubar">
+      <li><a href="the-ritual.html">The Ritual</a></li>
+      <li><a href="for-dogs.html">For Dogs</a></li>
+      <li><a href="for-cats.html" class="is-active">For Cats</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="journal.html">Journal</a></li>
+    </ul>
+    <div class="nav__utility">
+      <a href="account.html">Account</a>
+      <a href="cart.html" aria-label="Cart">Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="species-intro">
+    <div class="species-intro__copy">
+      <span class="eyebrow" style="display:block; margin-bottom: var(--space-s);">For Cats</span>
+      <h1 data-reveal>The Gentle Daily Shampoo.<br><span class="sage-accent">For dogs and cats.</span></h1>
+      <p style="font-size:1.05rem; line-height:1.75; margin-top: var(--space-m); color:#2a2f28;" data-reveal="fade">
+        The Furry Tail Gentle Daily Shampoo range is natural-origin, probiotic-preserved, and gentle
+        enough for cats. All three variants — Santal &amp; White Tea, Fig &amp; Neroli, and Hinoki &amp; Bamboo —
+        are suitable for both dogs and cats.
+      </p>
+      <div style="margin-top: var(--space-l);" data-reveal="fade">
+        <a href="gentle-daily-shampoo.html" class="btn btn--primary">Shop the Shampoos &rarr;</a>
+      </div>
+    </div>
+    <div class="species-intro__image" style="background: var(--sage-light);">
+      [ For Cats — Gentle Daily Shampoo range photography ]
+    </div>
+  </section>
+
+  <!-- THE CAT-ELIGIBLE PRODUCTS -->
+  <section class="section" aria-label="Products for cats">
+    <div class="container">
+      <div class="range__head" data-reveal>
+        <span class="eyebrow">The cat-eligible range</span>
+        <h2>Three shampoos.<br><span class="sage-accent">Safe for cats.</span></h2>
+        <p class="range__subhead">
+          Natural-origin base, probiotic preservation, gentle surfactant system.
+          The same certified formula used for dogs. Suitable for cats.
+        </p>
+      </div>
+      <div class="range__grid product-grid--3 hover-premium-lift" data-stagger>
+
+
+        <a href="gentle-daily-shampoo-santal.html" class="card">
+          <div class="card__image card__image--forest">
+            <img src="images/gentle-daily-shampoo-santal.png" class="card__image-primary" alt="Santal and White Tea shampoo bottle" loading="lazy" />
+            <img src="images/gentle-daily-shampoo-santal-hover.png" class="card__image-secondary" alt="Santal and White Tea shampoo bottle details" loading="lazy" />
+            <div class="card__overlay">
+              <div class="card__overlay-content">
+                <span class="card__overlay-eyebrow">99.5% Natural Origin</span>
+                <p class="card__overlay-text">Warm sandalwood. White tea quiet. A calm, unhurried bath.</p>
+                <div class="card__overlay-details">Probiotic preserved &middot; 300ml</div>
+                <span class="card__overlay-cta">Discover &rarr;</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="card__name">Gentle Daily Shampoo</h3>
+          <p class="card__fragrance">Santal &amp; White Tea</p>
+          <p class="card__hook">
+            Warm sandalwood. White tea quiet. A calm, unhurried bath — for dogs and cats alike.
+          </p>
+          <div class="card__proof">
+            99.5% Natural Origin &middot; Probiotic preserved &middot; Dogs &amp; Cats &middot; 300ml
+          </div>
+          <span class="card__cta">Discover &rarr;</span>
+        </a>
+
+        <a href="gentle-daily-shampoo-fig-neroli.html" class="card">
+          <div class="card__image card__image--amber">
+            <img src="images/gentle-daily-shampoo-fig-neroli.png" class="card__image-primary" alt="Fig and Neroli shampoo bottle" loading="lazy" />
+            <img src="images/gentle-daily-shampoo-fig-neroli-hover.png" class="card__image-secondary" alt="Fig and Neroli shampoo bottle details" loading="lazy" />
+            <div class="card__overlay">
+              <div class="card__overlay-content">
+                <span class="card__overlay-eyebrow">99.5% Natural Origin</span>
+                <p class="card__overlay-text">Sun-warmed fig, the bright lift of neroli. Bath day with southern light.</p>
+                <div class="card__overlay-details">Probiotic preserved &middot; 300ml</div>
+                <span class="card__overlay-cta">Discover &rarr;</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="card__name">Gentle Daily Shampoo</h3>
+          <p class="card__fragrance">Fig &amp; Neroli</p>
+          <p class="card__hook">
+            Sun-warmed fig, the bright lift of neroli. Bath day with southern light.
+            For dogs and cats.
+          </p>
+          <div class="card__proof">
+            99.5% Natural Origin &middot; Probiotic preserved &middot; Dogs &amp; Cats &middot; 300ml
+          </div>
+          <span class="card__cta">Discover &rarr;</span>
+        </a>
+
+        <a href="gentle-daily-shampoo-hinoki.html" class="card">
+          <div class="card__image card__image--cool-stone">
+            <img src="images/gentle-daily-shampoo-hinoki.png" class="card__image-primary" alt="Hinoki and Bamboo shampoo bottle" loading="lazy" />
+            <img src="images/gentle-daily-shampoo-hinoki-hover.png" class="card__image-secondary" alt="Hinoki and Bamboo shampoo bottle details" loading="lazy" />
+            <div class="card__overlay">
+              <div class="card__overlay-content">
+                <span class="card__overlay-eyebrow">99.5% Natural Origin</span>
+                <p class="card__overlay-text">Cool Japanese cypress and clean bamboo. Quiet, mineral, unhurried.</p>
+                <div class="card__overlay-details">Probiotic preserved &middot; 300ml</div>
+                <span class="card__overlay-cta">Discover &rarr;</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="card__name">Gentle Daily Shampoo</h3>
+          <p class="card__fragrance">Hinoki &amp; Bamboo</p>
+          <p class="card__hook">
+            Cool Japanese cypress and clean bamboo. Quiet, mineral, unhurried.
+            For dogs and cats.
+          </p>
+          <div class="card__proof">
+            99.5% Natural Origin &middot; Probiotic preserved &middot; Dogs &amp; Cats &middot; 300ml
+          </div>
+          <span class="card__cta">Discover &rarr;</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THESE ARE CAT-SAFE -->
+  <section class="section section--terra-light" aria-label="Why these are safe for cats">
+    <div class="container story" data-reveal>
+      <span class="eyebrow">Why these work for cats</span>
+      <h2>Natural-origin. Gentle.<br><span class="sage-accent">Formulated with care.</span></h2>
+      <p>
+        The Gentle Daily Shampoo range uses a natural-origin surfactant base —
+        Sodium Cocoyl Isethionate and Cocamidopropyl Betaine, both coconut-derived — with
+        a probiotic preservation system and no synthetic preservatives. The formula is
+        gentle on skin and coat, and rinses clean without residue.
+      </p>
+      <p>
+        The same formula standard that makes these shampoos right for dogs makes them right
+        for cats. If your household has both, one bottle works for both. Rinse thoroughly,
+        avoid contact with eyes and mouth, and consult your vet for kittens under 12 weeks.
+      </p>
+      <div class="story__cta-row">
+        <a href="gentle-daily-shampoo.html" class="btn btn--ghost">View all three variants &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOGS-ONLY PRODUCTS — honest and brief -->
+  <section class="section" aria-label="Dogs-only products">
+    <div class="container">
+      <div data-reveal style="max-width: var(--reading-width); margin: 0 auto var(--space-l);">
+        <span class="eyebrow">Dogs only</span>
+        <h2>The rest of the range<br><span class="sage-accent">is for dogs only.</span></h2>
+        <p style="font-size:1.05rem; color:#2a2f28; margin-top: var(--space-m);">
+          The remaining four products use fragrance actives or functional ingredients
+          that are not suitable for cats. This is noted clearly on each product page.
+        </p>
+      </div>
+      <div class="dogs-only-list" data-stagger>
+        <div class="dogs-only-item">
+          <div class="dogs-only-item__name">Anti-Tick &amp; Flea Spray</div>
+          <div class="dogs-only-item__frag">Vetiver &amp; Cypress</div>
+          <p class="dogs-only-item__note">
+            Uses vetiver root oil, cypress oil, and citronella — plant-derived actives with
+            terpene profiles that are not safe for cats.
+          </p>
+        </div>
+        <div class="dogs-only-item">
+          <div class="dogs-only-item__name">Paw Cleaner</div>
+          <div class="dogs-only-item__frag">Spearmint &amp; Sea Salt</div>
+          <p class="dogs-only-item__note">
+            Contains Mentha Spicata Leaf Oil (spearmint). Menthol compounds in spearmint
+            are not safe for cats to inhale or absorb through paw pads.
+          </p>
+        </div>
+        <div class="dogs-only-item">
+          <div class="dogs-only-item__name">Dry Foam Shampoo</div>
+          <div class="dogs-only-item__frag">Mimosa &amp; Tonka</div>
+          <p class="dogs-only-item__note">
+            The fragrance profile uses coumarin-bearing tonka bean extract. Formulated
+            for dogs only.
+          </p>
+        </div>
+        <div class="dogs-only-item">
+          <div class="dogs-only-item__name">Refreshing Mist</div>
+          <div class="dogs-only-item__frag">Yuzu &amp; White Musk</div>
+          <p class="dogs-only-item__note">
+            Contains Citrus Junos Peel Oil (yuzu). Citrus terpenes at misting concentrations
+            are not appropriate for cats. Formulated for dogs only.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter" id="newsletter" aria-label="Join the newsletter">
+    <div class="newsletter__inner" data-reveal="fade">
+      <span class="eyebrow">The monthly letter</span>
+      <h2>First, read the label.<br><span class="sage-accent">Then decide.</span></h2>
+      <p class="newsletter__body">
+        One email a month. Ingredient guides, grooming routines, and what is launching next.
+        For the pet parent who wants to know what is actually in the bottle.
+      </p>
+      <form class="newsletter__form" action="contact.html#newsletter" method="post" novalidate>
+        <input class="newsletter__input" type="email" name="contact[email]"
+               placeholder="your email address" required aria-label="Your email address" />
+        <button class="newsletter__submit" type="submit">Join the Ritual</button>
+      </form>
+      <p class="newsletter__fineprint">No spam. Unsubscribe any time. We mean both.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">Furry Tail <span class="tagline">happily ever after.</span></div>
+      <p class="footer__sub">Premium pet care for the pet parent who holds their standard.</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h4>The Ritual</h4>
+        <ul>
+          <li><a href="gentle-daily-shampoo-santal.html">Santal &amp; White Tea</a></li>
+          <li><a href="gentle-daily-shampoo-fig-neroli.html">Fig &amp; Neroli</a></li>
+          <li><a href="gentle-daily-shampoo-hinoki.html">Hinoki &amp; Bamboo</a></li>
+          <li><a href="anti-tick-flea-spray.html">Anti-Tick &amp; Flea Spray</a></li>
+          <li><a href="paw-cleaner.html">Paw Cleaner</a></li>
+          <li><a href="dry-foam-shampoo.html">Dry Foam Shampoo</a></li>
+          <li><a href="refreshing-mist.html">Refreshing Mist</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>The Brand</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ingredients.html">Ingredients</a></li>
+          <li><a href="the-standard.html">The Standard</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Us</h4>
+        <div class="footer__contact">
+          <a href="mailto:hello@furrytailjoy.com">hello@furrytailjoy.com</a><br />
+          furrytailjoy.com<br />
+          <a href="https://instagram.com/furrytailjoy" target="_blank" rel="noopener">@furrytailjoy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      &copy; 2026 Furry Tail <span class="divider-dot">&middot;</span> Made in India, to a global standard
+      <span class="divider-dot">&middot;</span> <a href="privacy.html">Privacy</a>
+      <span class="divider-dot">&middot;</span> <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

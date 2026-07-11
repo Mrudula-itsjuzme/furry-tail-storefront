@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furry Tail — Contact</title>
+  <meta name="description" content="Get in touch with Furry Tail. hello@furrytailjoy.com — one team, replies within one business day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <script>document.documentElement.classList.add('js-on');</script>
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: var(--space-xl);
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-xxl) var(--space-m);
+      align-items: start;
+    }
+    .contact-aside h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.35rem;
+      margin-bottom: var(--space-m);
+    }
+    .contact-aside p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #2a2f28;
+      margin-bottom: var(--space-m);
+    }
+    .contact-aside a {
+      border-bottom: 1px solid var(--sage);
+      color: var(--sage);
+    }
+    .contact-aside a:hover { color: var(--ink); border-color: var(--ink); }
+    .contact-aside__divider {
+      border: none;
+      border-top: 1px solid var(--mist);
+      margin: var(--space-l) 0;
+    }
+    @media (max-width: 800px) {
+      .contact-layout { grid-template-columns: 1fr; gap: var(--space-l); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Furry Tail — home"><img src="images/logo.png" alt="Furry Tail" /></a>
+    <ul class="nav__links" role="menubar">
+      <li><a href="the-ritual.html">The Ritual</a></li>
+      <li><a href="for-dogs.html">For Dogs</a></li>
+      <li><a href="for-cats.html">For Cats</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="journal.html">Journal</a></li>
+    </ul>
+    <div class="nav__utility">
+      <a href="account.html">Account</a>
+      <a href="cart.html" aria-label="Cart">Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="inner-hero inner-hero--terra">
+    <div class="inner-hero__inner">
+      <span class="eyebrow" data-reveal="fade">Contact</span>
+      <h1 data-reveal>We read every message.</h1>
+      <p class="inner-hero__lede" data-reveal="fade">hello@furrytailjoy.com — that is the address. One team. Replies within one business day.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT LAYOUT -->
+  <div class="contact-layout">
+
+    <!-- FORM -->
+    <div data-reveal>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-field">
+          <label class="form-label" for="contact-name">Name</label>
+          <input class="form-input" type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Your name" />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="contact-email">Email</label>
+          <input class="form-input" type="email" id="contact-email" name="email" autocomplete="email" required placeholder="Your email address" />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="contact-subject">Subject</label>
+          <select class="form-select" id="contact-subject" name="subject">
+            <option value="">Select a topic</option>
+            <option value="order">Order query</option>
+            <option value="ingredient">Ingredient question</option>
+            <option value="press">Press</option>
+            <option value="partnership">Partnership</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="contact-message">Message</label>
+          <textarea class="form-textarea" id="contact-message" name="message" rows="6" required placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send message</button>
+      </form>
+    </div>
+
+    <!-- ASIDE -->
+    <div class="contact-aside" data-reveal="left">
+      <h3>Direct contact.</h3>
+      <p>
+        <a href="mailto:hello@furrytailjoy.com">hello@furrytailjoy.com</a><br />
+        Replies within one business day, Monday through Friday.
+      </p>
+      <hr class="contact-aside__divider" />
+      <h3>Instagram.</h3>
+      <p>
+        <a href="https://instagram.com/furrytailjoy" target="_blank" rel="noopener">@furrytailjoy</a><br />
+        Behind-the-scenes. Ingredient stories. Grooming rituals. We post when there is something worth showing.
+      </p>
+      <hr class="contact-aside__divider" />
+      <h3>Before you write.</h3>
+      <p>The <a href="faq.html">FAQ</a> covers the questions we get most — preservatives, cat safety, usage frequency, shelf life. If your question is there, it will be faster than waiting for our reply.</p>
+    </div>
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter section">
+    <div class="newsletter__inner">
+      <span class="eyebrow" data-reveal="fade">The Journal</span>
+      <h2 data-reveal>Ingredient deep-dives.<br>Grooming rituals.</h2>
+      <p class="newsletter__body" data-reveal="fade">One piece at a time. Delivered when there is something worth reading.</p>
+      <form class="newsletter__form" data-reveal="fade">
+        <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address" required />
+        <button type="submit" class="newsletter__submit">Join the Ritual</button>
+      </form>
+      <p class="newsletter__fineprint">Unsubscribe at any time.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">Furry Tail <span class="tagline">happily ever after.</span></div>
+      <p class="footer__sub">Premium pet care for the pet parent who holds their standard.</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h4>The Ritual</h4>
+        <ul>
+          <li><a href="gentle-daily-shampoo-santal.html">Santal &amp; White Tea</a></li>
+          <li><a href="gentle-daily-shampoo-fig-neroli.html">Fig &amp; Neroli</a></li>
+          <li><a href="gentle-daily-shampoo-hinoki.html">Hinoki &amp; Bamboo</a></li>
+          <li><a href="anti-tick-flea-spray.html">Anti-Tick &amp; Flea Spray</a></li>
+          <li><a href="paw-cleaner.html">Paw Cleaner</a></li>
+          <li><a href="dry-foam-shampoo.html">Dry Foam Shampoo</a></li>
+          <li><a href="refreshing-mist.html">Refreshing Mist</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>The Brand</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ingredients.html">Ingredients</a></li>
+          <li><a href="the-standard.html">The Standard</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Us</h4>
+        <div class="footer__contact">
+          <a href="mailto:hello@furrytailjoy.com">hello@furrytailjoy.com</a><br />furrytailjoy.com<br />
+          <a href="https://instagram.com/furrytailjoy" target="_blank" rel="noopener">@furrytailjoy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      &copy; 2026 Furry Tail <span class="divider-dot">&middot;</span> Made in India, to a global standard
+      <span class="divider-dot">&middot;</span> <a href="privacy.html">Privacy</a>
+      <span class="divider-dot">&middot;</span> <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

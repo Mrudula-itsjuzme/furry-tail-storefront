@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furry Tail — happily ever after.</title>
+  <meta name="description" content="Premium natural pet care for dogs. 99.5% Natural Origin Index per ISO 16128-2. Probiotic preservation. IFRA-compliant fine fragrance. Made in India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <script>document.documentElement.classList.add('js-on');</script>
+  <style>
+    .hero__secondary {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 14px;
+      margin-top: var(--space-m);
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+    .hero__secondary a {
+      color: var(--sage);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    /* 4-category cards — 2x2 on desktop, 1x1 on mobile */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-m);
+    }
+    @media (max-width: 700px) {
+      .category-grid { grid-template-columns: 1fr; }
+    }
+    .category-card {
+      background: var(--cream);
+      border: 1px solid var(--mist);
+      padding: var(--space-l) var(--space-m) var(--space-m);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition:
+        transform 480ms var(--ease-expo),
+        box-shadow 480ms var(--ease-expo),
+        border-color 280ms ease;
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(17,22,16,0.08);
+      border-color: rgba(216,221,217,0.3);
+    }
+    .category-card__label {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      color: var(--sage);
+      margin-bottom: var(--space-m);
+    }
+    .category-card__image {
+      aspect-ratio: 16 / 9;
+      background: var(--sage-light);
+      margin-bottom: var(--space-m);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--sage);
+      font-size: 1rem;
+      overflow: hidden;
+    }
+    .category-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1.1rem;
+      transition: transform 650ms var(--ease-expo);
+    }
+    .category-card:hover .category-card__image img {
+      transform: scale(1.045);
+    }
+    .category-card__image--forest   { background: #3F5A46; color: var(--cream); }
+    .category-card__image--midnight { background: #2F3B4A; color: var(--cream); }
+    .category-card__image--sage     { background: var(--sage-light); }
+    .category-card__image--amber    { background: #C9A36B; color: var(--ink); }
+    .category-card__name {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.75rem;
+      color: var(--ink);
+      margin: 0 0 0.3rem;
+    }
+    .category-card__sub {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--sage);
+      font-size: 1rem;
+      margin-bottom: var(--space-s);
+    }
+    .category-card__desc {
+      font-size: 0.95rem;
+      color: #2a2f28;
+      line-height: 1.7;
+      flex-grow: 1;
+      margin-bottom: var(--space-m);
+    }
+    .category-card__cta {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 0.3rem;
+      align-self: flex-start;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .category-card:hover .category-card__cta { color: var(--sage); border-color: var(--sage); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html" aria-label="Furry Tail — home">
+        <img src="images/logo.png" alt="Furry Tail" />
+      </a>
+      <ul class="nav__links" role="menubar">
+        <li><a href="the-ritual.html">The Ritual</a></li>
+        <li><a href="for-dogs.html">For Dogs</a></li>
+        <li><a href="for-cats.html">For Cats</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+      <div class="nav__utility">
+        <a href="account.html">Account</a>
+        <a href="cart.html" aria-label="Cart">Cart (0)</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__copy">
+        <span class="eyebrow">For the pet parent who reads every label.</span>
+        <h1 class="hero__headline">Your standard.<br /><span class="sage-accent">Now for your pet.</span></h1>
+        <a href="the-ritual.html" class="btn btn--primary">Begin the Ritual &rarr;</a>
+        <p class="hero__secondary">Not sure where to start? <a href="find-your-ritual.html">Find your ritual &rarr;</a></p>
+        <div class="hero__microcopy">
+          99.5% Natural Origin Index per ISO 16128-2 <span class="divider-dot">&middot;</span>
+          Probiotic preserved <span class="divider-dot">&middot;</span>
+          Made in India, to a global standard
+        </div>
+      </div>
+      <div class="hero__image hero__image--video"
+           role="img"
+           aria-label="A dog at home with Furry Tail care products">
+        <video class="hero__video"
+               src="images/dog_homepage.mp4"
+               autoplay
+               muted
+               loop
+               playsinline
+               preload="metadata"></video>
+        <div class="hero__video-fallback">Furry Tail at home</div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust" aria-label="What makes us different">
+      <div class="trust__grid" data-stagger>
+        <div class="trust__item">
+          <div class="trust__label">Actually clean. Certified.</div>
+          <div class="trust__sub">99.5% Natural Origin Index per ISO 16128-2</div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__label">No synthetic preservatives. At all.</div>
+          <div class="trust__sub">Probiotic preservation &middot; Leuconostoc / Radish Root Ferment</div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__label">Formulated for the pet, not the shelf.</div>
+          <div class="trust__sub">Vet-consulted &middot; IFRA-compliant fine fragrance</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE RANGE — 4 category cards -->
+    <section class="section" aria-label="The Range">
+      <div class="container">
+        <div class="range__head" data-reveal>
+          <span class="eyebrow">The Range</span>
+          <h2>Four rituals.<br /><span class="sage-accent">One standard.</span></h2>
+          <p class="range__subhead">
+            Every product covers a real moment: bath day, before the walk, after the walk, between baths.
+            All built to the same certified formula standard. No exceptions.
+          </p>
+        </div>
+        <div class="category-grid" data-stagger>
+
+          <a class="category-card" href="gentle-daily-shampoo.html">
+            <div class="category-card__label">Ritual</div>
+            <div class="category-card__image category-card__image--forest">
+              <img src="images/gentle-daily-shampoo-santal.png" alt="Gentle Daily Shampoo bottle" loading="lazy" />
+            </div>
+            <h3 class="category-card__name">Gentle Daily Shampoo</h3>
+            <p class="category-card__sub">Santal &amp; White Tea &middot; Fig &amp; Neroli &middot; Hinoki &amp; Bamboo</p>
+            <p class="category-card__desc">
+              Three fine-fragrance shampoo variants for bath day. Each uses the same
+              99.5% natural-origin base, probiotic preservation, and IFRA-compliant
+              fragrance profile. The foundation of the routine.
+            </p>
+            <span class="category-card__cta">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="anti-tick-flea-spray.html">
+            <div class="category-card__label">Defense</div>
+            <div class="category-card__image category-card__image--midnight">
+              <img src="images/anti-tick-flea-spray.png" alt="Anti-Tick and Flea Spray bottle" loading="lazy" />
+            </div>
+            <h3 class="category-card__name">Anti-Tick &amp; Flea Spray</h3>
+            <p class="category-card__sub">Vetiver &amp; Cypress</p>
+            <p class="category-card__desc">
+              Before every walk. Plant-derived actives that help deter ticks and fleas
+              with a fragrance that actually belongs on a good shelf. Not a chemical smell.
+              Vetiver root and cypress resin.
+            </p>
+            <span class="category-card__cta">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="paw-cleaner.html">
+            <div class="category-card__label">Remedy</div>
+            <div class="category-card__image category-card__image--sage">
+              <img src="images/paw-cleaner.png" alt="Paw Cleaner bottle" loading="lazy" />
+            </div>
+            <h3 class="category-card__name">Paw Cleaner</h3>
+            <p class="category-card__sub">Spearmint &amp; Sea Salt</p>
+            <p class="category-card__desc">
+              The ritual at the door. Cool spearmint and sea salt &mdash; a waterless cleaner
+              for paws coming in from the street, the park, the monsoon. No rinsing required.
+            </p>
+            <span class="category-card__cta">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="the-ritual.html#refresh">
+            <div class="category-card__label">Refresh</div>
+            <div class="category-card__image category-card__image--amber">
+              <img src="images/dry-foam-shampoo.png" alt="Dry Foam Shampoo bottle" loading="lazy" />
+            </div>
+            <h3 class="category-card__name">Between Bath Days</h3>
+            <p class="category-card__sub">Dry Foam Shampoo &middot; Refreshing Mist</p>
+            <p class="category-card__desc">
+              No water, no fuss. Mimosa and tonka in a dry foam that freshens the coat.
+              Yuzu and white musk in a light mist. The between-bath ritual, properly done.
+            </p>
+            <span class="category-card__cta">Explore &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY FURRY TAIL -->
+    <section class="section section--terra-light" aria-label="Why Furry Tail">
+      <div class="container story" data-reveal>
+        <span class="eyebrow">Why Furry Tail exists</span>
+        <h2>The pet care shelf wasn't built for the label reader.<br /><span class="sage-accent">Furry Tail is.</span></h2>
+        <p>
+          Most people who care about what goes on their own skin &mdash; who read ingredient lists,
+          who switched to a natural deodorant, who know what &ldquo;INCI name&rdquo; means &mdash; are buying
+          whatever is on the shelf for their dog. Not because they do not care. Because there has
+          been nothing designed for someone who does.
+        </p>
+        <p>
+          Furry Tail is the first pet care range built for the person holding it, not just the animal wearing it. The formula is vet-consulted. The fragrance is IFRA-compliant. The preservation system uses probiotic culture, Leuconostoc/Radish Root Ferment Filtrate, because the ingredient deserves to be chosen, not defaulted to. It belongs on your shelf because it was made to the same standard as everything else on it.
+        </p>
+        <p>
+          Our formulas carry a 99.5% Natural Origin Index per ISO 16128-2. The preservative system
+          is probiotic &mdash; Leuconostoc / Radish Root Ferment &mdash; because we believe the formula
+          should work without shortcuts. And our fragrances are IFRA-compliant fine fragrance profiles,
+          built from the same vocabulary as premium personal care. India-made. Globally positioned.
+        </p>
+        <div class="story__cta-row">
+          <a href="about.html" class="btn btn--ghost">Read our story &rarr;</a>
+          <a href="the-standard.html" class="story__secondary-link">The Standard &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULA PROOF (dark) -->
+    <section class="section section--ink" aria-label="The formula difference">
+      <div class="container">
+        <div class="formula__head" data-reveal="fade">
+          <span class="eyebrow">The formula difference</span>
+          <h2>Three things most pet care brands skip.<br /><span class="sage-accent">We did not.</span></h2>
+        </div>
+        <div class="formula__grid" data-stagger>
+          <div class="formula__item">
+            <div class="formula__label">The 99.5% is certified. Not estimated.</div>
+            <p class="formula__body">
+              Most brands that say &ldquo;natural&rdquo; are using a loosely defined term. Ours is calculated under
+              ISO 16128-2, the international standard for natural origin measurement. Every batch has a
+              number that can be verified. That is what certified means.
+            </p>
+          </div>
+          <div class="formula__item">
+            <div class="formula__label">We replaced the preservatives. All of them.</div>
+            <p class="formula__body">
+              Standard pet care uses MIT, MCIT, parabens, or phenoxyethanol to keep formulas shelf-stable.
+              We use a probiotic system &mdash; Leuconostoc / Radish Root Ferment &mdash; that does the same job
+              without any of those. It is a harder formula to build. We built it anyway.
+            </p>
+          </div>
+          <div class="formula__item">
+            <div class="formula__label">Fine fragrance, not cover-up scent.</div>
+            <p class="formula__body">
+              Santal &amp; White Tea. Fig &amp; Neroli. Hinoki &amp; Bamboo. Vetiver &amp; Cypress. Mimosa &amp; Tonka.
+              Yuzu &amp; White Musk. Spearmint &amp; Sea Salt. IFRA-compliant fragrance profiles built from the
+              same raw material vocabulary as premium personal care. Part of the product identity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" aria-label="Early feedback">
+      <div class="container">
+        <div class="reviews__head" data-reveal>
+          <span class="eyebrow">Early feedback</span>
+          <h2>What pet parents said<br /><span class="sage-accent">after the first batch.</span></h2>
+        </div>
+        <div class="reviews__placeholder-banner">Illustrative &mdash; replace with verified reviews before launch</div>
+        <div class="reviews__grid" data-stagger>
+          <div class="review">
+            <p class="review__quote">
+              &ldquo;I have been looking for something that does not smell clinical. The Santal shampoo
+              is the first pet product I have actually looked forward to using.&rdquo;
+            </p>
+            <div class="review__byline">Pet parent &middot; Bangalore</div>
+          </div>
+          <div class="review">
+            <p class="review__quote">
+              &ldquo;My vet noticed the improvement in her coat before I even mentioned changing shampoos.&rdquo;
+            </p>
+            <div class="review__byline">Pet parent &middot; Mumbai</div>
+          </div>
+          <div class="review">
+            <p class="review__quote">
+              &ldquo;The paw cleaner lives by the front door now. I use the mist on myself too, honestly.&rdquo;
+            </p>
+            <div class="review__byline">Pet parent &middot; Delhi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter" id="newsletter" aria-label="Join the newsletter">
+      <div class="newsletter__inner" data-reveal="fade">
+        <span class="eyebrow">The monthly letter</span>
+        <h2>First, read the label.<br /><span class="sage-accent">Then decide.</span></h2>
+        <p class="newsletter__body">
+          One email a month. No promotions, no noise. Ingredient guides, seasonal grooming
+          routines, and what is launching next. For the pet parent who wants to know what is
+          actually in the bottle.
+        </p>
+        <form class="newsletter__form" action="contact.html#newsletter" method="post" novalidate>
+          <input class="newsletter__input" type="email" name="contact[email]"
+                 placeholder="your email address" required aria-label="Your email address" />
+          <button class="newsletter__submit" type="submit">Join the Ritual</button>
+        </form>
+        <p class="newsletter__fineprint">No spam. Unsubscribe any time. We mean both.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">Furry Tail <span class="tagline">happily ever after.</span></div>
+        <p class="footer__sub">Premium pet care for the pet parent who holds their standard.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>The Ritual</h4>
+          <ul>
+            <li><a href="gentle-daily-shampoo-santal.html">Santal &amp; White Tea</a></li>
+            <li><a href="gentle-daily-shampoo-fig-neroli.html">Fig &amp; Neroli</a></li>
+            <li><a href="gentle-daily-shampoo-hinoki.html">Hinoki &amp; Bamboo</a></li>
+            <li><a href="anti-tick-flea-spray.html">Anti-Tick &amp; Flea Spray</a></li>
+            <li><a href="paw-cleaner.html">Paw Cleaner</a></li>
+            <li><a href="dry-foam-shampoo.html">Dry Foam Shampoo</a></li>
+            <li><a href="refreshing-mist.html">Refreshing Mist</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>The Brand</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="the-standard.html">The Standard</a></li>
+            <li><a href="journal.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="account.html">My Account</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Reach Us</h4>
+          <div class="footer__contact">
+            <a href="mailto:hello@furrytailjoy.com">hello@furrytailjoy.com</a><br />
+            furrytailjoy.com<br />
+            <a href="https://instagram.com/furrytailjoy" target="_blank" rel="noopener">@furrytailjoy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__legal">
+        &copy; 2026 Furry Tail <span class="divider-dot">&middot;</span> Made in India, to a global standard
+        <span class="divider-dot">&middot;</span> <a href="privacy.html">Privacy</a>
+        <span class="divider-dot">&middot;</span> <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

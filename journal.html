@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furry Tail — Journal</title>
+  <meta name="description" content="The Furry Tail Journal. Ingredient deep-dives, grooming rituals, and the science behind the label. Slow reading for the pet parent who pays attention." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <script>document.documentElement.classList.add('js-on');</script>
+  <style>
+    .journal-featured-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-xxl) var(--space-m) var(--space-xl);
+    }
+    .journal-featured {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 0;
+      border: 1px solid var(--mist);
+      cursor: pointer;
+      transition: transform 400ms var(--ease-expo), box-shadow 400ms var(--ease-expo);
+    }
+    .journal-featured:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(17,22,16,0.09);
+    }
+    .journal-featured__image {
+      background: var(--label-midnight);
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--cream);
+      font-size: 1rem;
+      padding: 2rem;
+      text-align: center;
+      opacity: 0.85;
+    }
+    .journal-featured__copy {
+      padding: var(--space-xl) var(--space-l);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .journal-featured__copy .journal-card__title {
+      font-size: clamp(1.75rem, 2.5vw + 0.5rem, 2.5rem);
+      margin-bottom: var(--space-m);
+    }
+    @media (max-width: 860px) {
+      .journal-featured { grid-template-columns: 1fr; }
+      .journal-featured__image { min-height: 300px; }
+      .journal-featured__copy { padding: var(--space-l) var(--space-m); }
+    }
+    .journal-section-head {
+      text-align: center;
+      margin-bottom: var(--space-l);
+    }
+    .journal-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-l);
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-m) var(--space-xxl);
+    }
+    @media (max-width: 760px) {
+      .journal-cards-grid { grid-template-columns: 1fr; }
+    }
+    .journal-card-img-1 { background: var(--sage-light); }
+    .journal-card-img-2 { background: var(--terra-light); }
+    .journal-card-img-3 { background: var(--label-cool-stone); }
+    .journal-card-img-4 { background: var(--label-bone); }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Furry Tail — home"><img src="images/logo.png" alt="Furry Tail" /></a>
+    <ul class="nav__links" role="menubar">
+      <li><a href="the-ritual.html">The Ritual</a></li>
+      <li><a href="for-dogs.html">For Dogs</a></li>
+      <li><a href="for-cats.html">For Cats</a></li>
+      <li><a href="ingredients.html">Ingredients</a></li>
+      <li><a href="journal.html" class="is-active">Journal</a></li>
+    </ul>
+    <div class="nav__utility">
+      <a href="account.html">Account</a>
+      <a href="cart.html" aria-label="Cart">Cart (0)</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="inner-hero">
+    <div class="inner-hero__inner">
+      <span class="eyebrow" data-reveal="fade">The Journal</span>
+      <h1 data-reveal>Slow reading for the pet parent<br>who pays attention.</h1>
+      <p class="inner-hero__lede" data-reveal="fade">Ingredient deep-dives. Grooming rituals. The science behind the label. One piece at a time.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLE -->
+  <div class="journal-featured-wrap">
+    <span class="eyebrow" style="display:block; margin-bottom: var(--space-s);" data-reveal="fade">Featured</span>
+    <a href="#" class="journal-featured" data-reveal>
+      <div class="journal-featured__image">
+        [ Feature image — Lab / formulation photography ]
+      </div>
+      <div class="journal-featured__copy">
+        <div class="journal-card__meta">Formulation &middot; 5 min read</div>
+        <h2 class="journal-card__title">What we found in most pet shampoos.</h2>
+        <p class="journal-card__dek">The preservative system in most pet care products would not pass the standard you hold for your own skincare. We went through the labels so you do not have to. MIT, MCIT, phenoxyethanol — what they are, why they are used, and what we chose instead.</p>
+        <span class="journal-card__read">Read the full article &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- MORE ARTICLES -->
+  <div style="max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-m) var(--space-m);">
+    <div class="journal-section-head" data-reveal="fade">
+      <span class="eyebrow">From the journal</span>
+      <h2>More reading.</h2>
+    </div>
+  </div>
+  <div class="journal-cards-grid" data-stagger>
+
+    <a href="#" class="journal-card">
+      <div class="journal-card__image journal-card-img-1">[ Ingredient photography ]</div>
+      <div class="journal-card__meta">Ingredients &middot; 4 min read</div>
+      <h3 class="journal-card__title">The probiotic question.</h3>
+      <p class="journal-card__dek">Leuconostoc/Radish Root Ferment Filtrate. How a fermentation-derived system replaces the synthetic preservatives that most brands quietly rely on. What it is, how it works, and why it is harder to formulate with.</p>
+      <span class="journal-card__read">Read the full article &rarr;</span>
+    </a>
+
+    <a href="#" class="journal-card">
+      <div class="journal-card__image journal-card-img-2">[ Sandalwood / fragrance photography ]</div>
+      <div class="journal-card__meta">Fragrance &middot; 3 min read</div>
+      <h3 class="journal-card__title">Santal: a primer.</h3>
+      <p class="journal-card__dek">Sandalwood has been used in personal care for centuries. Here is what it actually is, what it does to the skin, and why we chose it as the anchor for our first fragrance. Steam-distilled heartwood, IFRA compliance, and the question of synthetic alternatives.</p>
+      <span class="journal-card__read">Read the full article &rarr;</span>
+    </a>
+
+    <a href="#" class="journal-card">
+      <div class="journal-card__image journal-card-img-3">[ Monsoon / wet dog photography ]</div>
+      <div class="journal-card__meta">Seasonal &middot; 4 min read</div>
+      <h3 class="journal-card__title">The monsoon ritual.</h3>
+      <p class="journal-card__dek">Mumbai, Chennai, Bangalore: monsoon season and a wet dog are a formulation challenge. What to use, when, and in what order. The Paw Cleaner, the Anti-Tick Spray, and the question of frequency during the high-humidity months.</p>
+      <span class="journal-card__read">Read the full article &rarr;</span>
+    </a>
+
+    <a href="#" class="journal-card">
+      <div class="journal-card__image journal-card-img-4">[ INCI label / ingredient list photography ]</div>
+      <div class="journal-card__meta">Guide &middot; 6 min read</div>
+      <h3 class="journal-card__title">Reading the INCI list.</h3>
+      <p class="journal-card__dek">Every ingredient has two names. The one you know. The one on the label. A field guide to decoding what is actually in your pet's products — what to look for, what to avoid, and what the jargon means in plain language.</p>
+      <span class="journal-card__read">Read the full article &rarr;</span>
+    </a>
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter section">
+    <div class="newsletter__inner">
+      <span class="eyebrow" data-reveal="fade">New in the journal</span>
+      <h2 data-reveal>Get the next piece<br>when it is ready.</h2>
+      <p class="newsletter__body" data-reveal="fade">We write when there is something worth saying. No cadence, no frequency pressure.</p>
+      <form class="newsletter__form" data-reveal="fade">
+        <input type="email" class="newsletter__input" placeholder="Your email address" aria-label="Email address" required />
+        <button type="submit" class="newsletter__submit">Join the Ritual</button>
+      </form>
+      <p class="newsletter__fineprint">Unsubscribe at any time.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">Furry Tail <span class="tagline">happily ever after.</span></div>
+      <p class="footer__sub">Premium pet care for the pet parent who holds their standard.</p>
+    </div>
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h4>The Ritual</h4>
+        <ul>
+          <li><a href="gentle-daily-shampoo-santal.html">Santal &amp; White Tea</a></li>
+          <li><a href="gentle-daily-shampoo-fig-neroli.html">Fig &amp; Neroli</a></li>
+          <li><a href="gentle-daily-shampoo-hinoki.html">Hinoki &amp; Bamboo</a></li>
+          <li><a href="anti-tick-flea-spray.html">Anti-Tick &amp; Flea Spray</a></li>
+          <li><a href="paw-cleaner.html">Paw Cleaner</a></li>
+          <li><a href="dry-foam-shampoo.html">Dry Foam Shampoo</a></li>
+          <li><a href="refreshing-mist.html">Refreshing Mist</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>The Brand</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ingredients.html">Ingredients</a></li>
+          <li><a href="the-standard.html">The Standard</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Reach Us</h4>
+        <div class="footer__contact">
+          <a href="mailto:hello@furrytailjoy.com">hello@furrytailjoy.com</a><br />furrytailjoy.com<br />
+          <a href="https://instagram.com/furrytailjoy" target="_blank" rel="noopener">@furrytailjoy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      &copy; 2026 Furry Tail <span class="divider-dot">&middot;</span> Made in India, to a global standard
+      <span class="divider-dot">&middot;</span> <a href="privacy.html">Privacy</a>
+      <span class="divider-dot">&middot;</span> <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
